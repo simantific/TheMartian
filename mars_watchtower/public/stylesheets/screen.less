@@ -1,0 +1,239 @@
+/* Join the chat http://zippychat.com/room/xisev */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Variables
+:: Shared Styles
+:: Header
+:: Footer
+:: Module: Earth and Mars Date
+:: New Section
+*/
+
+/* -----------------------------------------
+   Variables
+----------------------------------------- */
+
+    // Colors
+    
+    @white: #ffffff;
+    @white75: rgba(255,255,255,.75);
+    @white50: rgba(255,255,255,.5);
+    @white25: rgba(255,255,255,.25);
+    @white10:rgba(255,255,255,.1);
+    
+    @black: #444;
+    @black50: rgba(0,0,0,.5);
+    
+    // Typography
+    @font: 'Noto Sans', sans-serif;
+    @small: 10px;
+    @default: 20px; 
+    @display: 50px;
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+body {
+    font-family: @font;
+    font-size: @default;
+    color: @white;
+    background: #333 url('/images/mars-PIA14293.jpg');    
+    // background: #333 url('http://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA14293-1920x1200.jpg');
+    background-size: cover;
+}
+
+/* -----------------------------------------
+   Header
+----------------------------------------- */
+.header {
+    width: 100%;
+    padding: 1em 2em;
+    overflow: auto;
+    border-bottom: 1px solid @white10;
+
+    h1 {    
+        font-family: @font;
+        font-weight: normal;
+        font-size: @default;
+        color: @white;
+        float: left;
+        margin: .4em 0;
+    }
+}
+nav {
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 1em 1.4em;    
+    a {
+    font-size: 1.5em;
+    margin-left: .5em;
+    color: @white25;
+    transition: color 200ms ease;
+    cursor: pointer;
+    position: relative;
+    }
+    a:hover {
+        color: @white50;
+    }
+    a.active {
+        color: @white;
+    }    
+    a.icon-geomicon-134{
+        border-right: 1px dotted @white25;
+        padding-right: .25em;
+    }    
+    a:hover:after{
+        font-size: .35em;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: -3em;
+    }
+    a.icon-geomicon-091:hover:after{
+        content: "Temp";
+        left: 3px;
+    }
+    a.icon-geomicon-087:hover:after{
+        content: "Wind";
+        left: 1px;
+    }
+    a.icon-geomicon-187:hover:after{
+        content: "Pressure";
+        left: -12px;
+    }        
+    a.icon-geomicon-134:hover:after{
+        content: "Population";
+        left: -18px;
+    }
+    a.icon-geomicon-133:hover:after{
+        content: "Switch\00A0Units";
+        left: -25px;
+    }
+    a.icon-geomicon-133:active{
+        color: @white;
+    }    
+    a.icon-geomicon-133:active:after{
+        content: "Switch\00A0Units";
+        left: -25px;
+    }    
+    a.icon-geomicon-240:hover:after{
+        content: "Info";
+        left: 3px;
+    }        
+
+}
+
+/* -----------------------------------------
+   Module: Earth and Mars Date
+----------------------------------------- */
+
+.marsDate{
+    font-size: @display;
+    padding-left: 25px;
+    color: @white50;
+    margin: .25em 0;
+}
+.currentDate {    
+    font-size: @default;
+    color: @white50;
+    padding-left: 25px;
+    margin-top: 0;
+}
+
+
+/* -----------------------------------------
+   Module: Data
+------------------------------------------*/
+
+.dataContainer {
+    text-align: right;
+    margin: 0 10px;
+    
+    > div {
+        display: inline-block;
+        height: 150px;
+        padding: 1em;
+        font-size: @display;
+        vertical-align: top;
+    }
+    
+    > div + div {
+        border-left: 1px solid @white25;        
+    }
+}
+
+/* -----------------------------------------
+   Module: Temperature
+----------------------------------------- */
+
+    .minTemp{
+        display: block;
+        font-size: @default;
+        color: @white50;
+        margin: 1em 0;
+    }
+    .avgTemp{
+        display: block;
+    }
+    .maxTemp{
+        display: block;
+        font-size: @default;
+        color: @white50;
+        position: relative;
+        top: -5em;
+    }    
+
+/* -----------------------------------------
+   Module: Wind
+----------------------------------------- */
+
+    .windSpeed {
+        font-size: @display;        
+    }
+    .windDirection {
+        display: block;
+        font-size: @default;
+        text-transform: uppercase;
+        color: @white50;
+    }
+
+/* -----------------------------------------
+   Module: Pressure
+----------------------------------------- */
+
+    .pressure {
+        font-size: @display;
+    }
+    .pressureString {
+        font-size: @default;
+        text-transform: uppercase;
+        color: @white50;
+    }
+    
+/* -----------------------------------------
+   Module: Population
+----------------------------------------- */
+
+    .popCount {
+        font-size: @display;
+    }
+    .popString {
+        display: block;
+        font-size: @default;
+        text-transform: uppercase;
+        color: @white50;
+    }    
+
+/* -----------------------------------------
+   Info
+----------------------------------------- */
+
+    #info{
+        font-family: @font;
+        color: @black;
+        h2{
+            font-weight: normal;
+        }
+    }

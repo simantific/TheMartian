@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    .header
+        h1 The Martian
+    nav
+        a.icon-geomicon-091.btn(data-button="temp")  
+        a.icon-geomicon-087.btn(data-button="wind")  
+        a.icon-geomicon-187.btn(data-button="pressure")   
+        a.icon-geomicon-134.btn(data-button="people") 
+        a.icon-geomicon-133(data-button="unit")            
+        a.icon-geomicon-240(data-button="info", data-reveal-id="info")
+    
+
+
+
+   
+    .marsDate
+    .currentDate
+    .dataContainer(data-units="0")
+        .peopleDiv.item(data-button="people")
+            span.popCount 0
+            span.popString Humans (So Far)
+        .pressureDiv.item(data-button="pressure")
+        .windDiv.item(data-button="wind")
+        .tempDiv.item(data-button="temp")
+    .tempGraph.item(data-button="temp")
+    .report-timeline
+        select#timeline
+
+    #info.reveal-modal.large
+        h2 The Martian
+        p This project was built for the 2013 International Space Apps Challenge hackathon. Use this interactive app to explore the most recent Mars weather data from REMS (Rover Environmental Monitoring Station on the Curiosity rover.)
+        p Contributors: 
+            a(href="https://github.com/skoder91") Simar @skoder91
+        p Photo Courtesy NASA/JPL-Caltech.
+        p
+            a(href="") Link to Project Page
+        a.close-reveal-modal &#215;

@@ -1,0 +1,16 @@
+/* This was created by the fine folks at HuffPost Labs */
+
+
+Front End
+=====
+Zurb Foundation 2.2
+Jade Templates
+
+Back End
+=====
+node.js
+express.js
+
+Database
+=====
+mongo.db
