@@ -1,4 +1,4 @@
-TheMartian
+The Martian
 ==========
 
 Mars Weather app designed for the 2013 International Space Apps Challenge 48 hour hackathon. 
